@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: Zombie
+  SO_Enemy: {fileID: 11400000, guid: f01ceb582b980594cb00cc47c847c4b5, type: 2}
 --- !u!54 &-1812025236668261632
 Rigidbody:
   m_ObjectHideFlags: 0

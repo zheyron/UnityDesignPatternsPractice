@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = new Vector3(x, 0f, z).normalized;
 
         // Aplicamos movimiento multiplicado por velocidad
-        rb.velocity = move * moveSpeed;
+        //rb.velocity = move * moveSpeed;
+        transform.Translate(move * moveSpeed * Time.deltaTime);
     }
 }
