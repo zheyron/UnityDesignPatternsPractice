@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: Vampire
+  SO_Enemy: {fileID: 11400000, guid: 867fa910fba30de439a0c60cee3e7716, type: 2}
 --- !u!54 &-3151659759644048988
 Rigidbody:
   m_ObjectHideFlags: 0

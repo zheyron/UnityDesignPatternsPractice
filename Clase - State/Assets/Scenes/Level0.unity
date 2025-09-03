@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04121385ac356cd478a7b4ae98793eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 50
+  moveSpeed: 15
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,6 +1108,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3151659759644048988, guid: 816dfcbbc5a5ae048986aae80e4cc4d3, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 524212039204629268, guid: 816dfcbbc5a5ae048986aae80e4cc4d3, type: 3}
       propertyPath: m_Name
       value: Vampire
