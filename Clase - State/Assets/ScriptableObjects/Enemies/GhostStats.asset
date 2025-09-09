@@ -15,3 +15,4 @@ MonoBehaviour:
   maxHealth: 25
   baseDamage: 50
   baseMaterial: {fileID: 2100000, guid: 13535080904c4d44eb36bb0ec8ca5593, type: 2}
+  enemyType: Ghost

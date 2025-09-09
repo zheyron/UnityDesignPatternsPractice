@@ -15,3 +15,4 @@ MonoBehaviour:
   maxHealth: 100
   baseDamage: 5
   baseMaterial: {fileID: 2100000, guid: fcdf3362f30ef6049a3d9ac5e5a405df, type: 2}
+  enemyType: Zombie
