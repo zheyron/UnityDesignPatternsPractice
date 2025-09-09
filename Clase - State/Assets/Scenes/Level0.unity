@@ -994,6 +994,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6960339032993915483, guid: 451ac69f251e4ae439d57564a45106ff, type: 3}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 11400000, guid: f01ceb582b980594cb00cc47c847c4b5, type: 2}
     - target: {fileID: 5190083177100769177, guid: 451ac69f251e4ae439d57564a45106ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.97
@@ -1095,6 +1099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 7807994651492281258, guid: 742ea9f1ee375f84cbfe24bba6eadc24, type: 3}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 11400000, guid: f01ceb582b980594cb00cc47c847c4b5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1116,6 +1124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vampire
       objectReference: {fileID: 0}
+    - target: {fileID: 3973149288164108543, guid: 816dfcbbc5a5ae048986aae80e4cc4d3, type: 3}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 11400000, guid: 867fa910fba30de439a0c60cee3e7716, type: 2}
     - target: {fileID: 5355219068552159986, guid: 816dfcbbc5a5ae048986aae80e4cc4d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.81
