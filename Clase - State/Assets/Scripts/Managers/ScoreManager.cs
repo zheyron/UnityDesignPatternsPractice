@@ -30,6 +30,11 @@ public class ScoreManager : MonoBehaviour
         Coins += amount;
         Debug.Log($"Added coin. Current Coins: {Coins}");
         OnCoinsChanged?.Invoke(Coins); // Si OnCoinsChanged no es nulo, avisa
+
+        if (Coins % 3 == 0)
+        {
+            SceneManagerSimple.Instance.LoadNextLevel();
+        }
     }
 
     public static void Reset()
