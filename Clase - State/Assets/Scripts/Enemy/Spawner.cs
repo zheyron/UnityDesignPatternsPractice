@@ -5,10 +5,11 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private EnemyFactory EnemyFactory;
+    [SerializeField] private WeaponFactory WeaponFactory;
     [SerializeField] private Transform _spawnPoint;
 
     public Transform SpawnPoint => _spawnPoint; // property to expose it safely
-
+    public Transform WeaponSpawnPoint => _spawnPoint; // property to expose it safely
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
@@ -22,6 +23,10 @@ public class Spawner : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V))
         {
             EnemyFactory.CreateEnemy("Vampire", _spawnPoint.position);
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            WeaponFactory.CreateWeapon("cannon", _spawnPoint.position);
         }
     }
 }
