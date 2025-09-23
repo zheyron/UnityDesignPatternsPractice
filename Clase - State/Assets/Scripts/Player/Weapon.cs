@@ -5,8 +5,14 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public enum BulletType
+    {
+        single,
+        multi
+    }
     [SerializeField] private BulletMovement bullet;
     [SerializeField] private GameObject point;
+    [SerializeField] private BulletType type;
     [SerializeField] private float fireRateSingle = 0.0f;
     [SerializeField] private float fireRateAuto = 0.1f;
 
@@ -29,9 +35,15 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+        //    // Instantiate(bullet, point.transform.position,point.transform.rotation);
+        //    bulletPool.Get();
+        //}
+
+        if (Input.GetButton("Fire1"))
         {
-            // Instantiate(bullet, point.transform.position,point.transform.rotation);
             bulletPool.Get();
         }
     }
