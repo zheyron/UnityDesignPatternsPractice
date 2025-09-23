@@ -5,8 +5,17 @@ using UnityEngine.Pool;
 
 public class BulletMovement : MonoBehaviour
 {
+    public enum BulletType
+    {
+        single,
+        multi
+    }
+
     [SerializeField] private float speed;
     [SerializeField] private float destroyTime = 2.0f;
+    [SerializeField] private BulletType type;
+
+
     public ObjectPool<BulletMovement> pool;
 
     private void OnEnable()
@@ -23,5 +32,7 @@ public class BulletMovement : MonoBehaviour
     {
         pool.Release(this);
     }
+
+    public BulletType GetBulletType() => type;
 
 }

@@ -7,15 +7,19 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private BulletMovement bullet;
     [SerializeField] private GameObject point;
+    [SerializeField] private float fireRateSingle = 0.0f;
+    [SerializeField] private float fireRateAuto = 0.1f;
 
     ObjectPool<BulletMovement> bulletPool;
+    private bool isAutomatic; // true si el prefab es multi
+    private float nextFireTime = 0f; // cooldown
 
     // Start is called before the first frame update
     void Start()
     {
         bulletPool = new ObjectPool<BulletMovement>(CreateBullet,GetBullet,ReleaseBullet,DestroyBullet, false,10,100);
 
-        //for (int i = 0;i <10; i++)
+        //for (int i = 0; i < 10; i++)
         //{
         //    BulletMovement b = bulletPool.Get();
         //    bulletPool.Release(b);
@@ -29,7 +33,6 @@ public class Weapon : MonoBehaviour
         {
             // Instantiate(bullet, point.transform.position,point.transform.rotation);
             bulletPool.Get();
-
         }
     }
 
