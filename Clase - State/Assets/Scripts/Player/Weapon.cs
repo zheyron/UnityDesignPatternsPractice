@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bulletPool = new ObjectPool<BulletMovement>(CreateBullet,GetBullet,ReleaseBullet,DestroyBullet, false,10,15);
+        bulletPool = new ObjectPool<BulletMovement>(CreateBullet,GetBullet,ReleaseBullet,DestroyBullet, false,10,100);
 
         //for (int i = 0;i <10; i++)
         //{
