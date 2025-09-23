@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class SuperCoin : Coin
 {
-    private void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            ScoreManager.AddCoins();
+            ScoreManager.AddCoins(5);
             Destroy(gameObject);
         }
     }

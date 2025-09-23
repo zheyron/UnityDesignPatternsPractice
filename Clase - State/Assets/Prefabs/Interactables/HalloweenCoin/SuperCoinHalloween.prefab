@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5669819489640576806}
   - component: {fileID: 3198843645756382742}
   - component: {fileID: 5349482522836456869}
-  - component: {fileID: -1837855008634971272}
+  - component: {fileID: -5170247161817041631}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: SuperCoinHalloween
   m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 4885431864402954667}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.87, z: -9.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -11, y: 2, z: -11.92}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6020f6d3a324bc442a67be15bcc9f3f9, type: 2}
+  - {fileID: 2100000, guid: febb6f0bab0cf9a438def90afa54ee0f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,7 +106,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1837855008634971272
+--- !u!114 &-5170247161817041631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4885431864402954667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac5cae530341f4409293a336156c7fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f9b3fb6bd1fef2428c49e80e86ece73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: supercoin
