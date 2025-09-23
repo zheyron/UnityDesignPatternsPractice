@@ -6,10 +6,10 @@ using UnityEngine.Pool;
 public class BulletMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private float destroyTime;
+    [SerializeField] private float destroyTime = 2.0f;
     public ObjectPool<BulletMovement> pool;
 
-    private void Start()
+    private void OnEnable()
     {
         Invoke("BulletDestroy", destroyTime);
     }
