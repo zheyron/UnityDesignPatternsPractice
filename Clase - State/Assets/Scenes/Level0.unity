@@ -213,8 +213,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437874960}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.524324, y: -5.5888844, z: 2.1468315}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.5243235, y: -5.5888844, z: 2.1468315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -758,6 +758,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1247999429407628431, guid: 1c680828022071d4388fb4e36fe64a6b, type: 3}
   point: {fileID: 547689358}
+  type: 1
+  fireRateSingle: 0
+  fireRateAuto: 0.1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +963,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: supercoin
+--- !u!1 &1685635648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1685635649}
+  - component: {fileID: 1685635650}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1685635649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685635648}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.436589, y: -2.886073, z: 3.4922504}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1685635650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685635648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c5dacb8b620d946a5bfb64ee1b369e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1696382298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,7 +1506,8 @@ SceneRoots:
   - {fileID: 209374728691230353}
   - {fileID: 9054787749826213657}
   - {fileID: 1171538393443081142}
-  - {fileID: 437874962}
   - {fileID: 195635414}
   - {fileID: 2027357827}
   - {fileID: 1880106020}
+  - {fileID: 1685635649}
+  - {fileID: 437874962}
