@@ -10,6 +10,8 @@ public class Weapon : MonoBehaviour
         single,
         multi
     }
+
+    [SerializeField] private string id; 
     [SerializeField] private BulletMovement bullet;
     [SerializeField] private GameObject point;
     [SerializeField] private BulletType type;
@@ -20,10 +22,12 @@ public class Weapon : MonoBehaviour
     private bool isAutomatic; // true si el prefab es multi
     private float nextFireTime = 0f; // cooldown
 
+    public string Id => id;
+
     // Start is called before the first frame update
     void Start()
     {
-        bulletPool = new ObjectPool<BulletMovement>(CreateBullet,GetBullet,ReleaseBullet,DestroyBullet, false,10,100);
+        bulletPool = new ObjectPool<BulletMovement>(CreateBullet,GetBullet,ReleaseBullet,DestroyBullet, false,20,100);
 
         //for (int i = 0; i < 10; i++)
         //{

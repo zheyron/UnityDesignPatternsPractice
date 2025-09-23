@@ -17,6 +17,8 @@ public class CoinFactory : MonoBehaviour
         {
             coinMap.Add(coin.Id, coin);
         }
+
+
         superCoinMap = new Dictionary<string, SuperCoin>();
 
         foreach (var superCoin in superCoinsList)

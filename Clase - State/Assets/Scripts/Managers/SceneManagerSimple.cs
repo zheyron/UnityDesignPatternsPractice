@@ -34,6 +34,8 @@ public class SceneManagerSimple : MonoBehaviour
         }
 
         SceneManager.LoadScene(nextIndex);
+
     }
+
 
 }
