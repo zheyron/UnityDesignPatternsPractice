@@ -54,12 +54,30 @@ public class InputHandler : MonoBehaviour
         }
     }
 
+    // === UI-callable PUBLIC methods ===
+    public void PressUpButton() => Run(new MoveForwardCommand(player));
+    public void PressDownButton() => Run(new MoveBackwardsCommand(player));
+    public void PressLeftButton() => Run(new MoveLeftCommand(player));
+    public void PressRightButton() => Run(new MoveRightCommand(player));
+
+    public void StartReplay() => StartCoroutine(ReplayActions());
+    public void StartUndoAll() => StartCoroutine(ZaWarudo());
+
+    // === shared runner ===
+    private void Run(ICommand cmd)
+    {
+        if (player == null) { Debug.LogWarning("InputHandler: Player is null."); return; }
+        cmd.Execute();
+        recordedReplayCommands.Add(cmd);
+        commandsHistory.Push(cmd);
+    }
+
     private IEnumerator ReplayActions()
     {
         foreach (var command in recordedReplayCommands)
         {
             command.Execute();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.08f);
         }
         recordedReplayCommands.Clear();
     }
@@ -70,17 +88,8 @@ public class InputHandler : MonoBehaviour
         foreach (var command in commandsHistory)
         {
             command.Undo();
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.08f);
         }
-        //int recordLength = commandsHistory.Count;
-
-        //for (int i = recordLength-1; i > 0; i--) {
-        //    //Debug.Log($"recorded index{recordedReplayCommands.pop} {i}");
-        //    commandsHistory.Pop().Execute();
-        //    yield return new WaitForSeconds(0.5f);
-            
-
-        //}
         commandsHistory.Clear();
     }
 
