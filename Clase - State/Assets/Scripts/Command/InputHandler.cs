@@ -72,15 +72,6 @@ public class InputHandler : MonoBehaviour
             command.Undo();
             yield return new WaitForSeconds(0.1f);
         }
-        //int recordLength = commandsHistory.Count;
-
-        //for (int i = recordLength-1; i > 0; i--) {
-        //    //Debug.Log($"recorded index{recordedReplayCommands.pop} {i}");
-        //    commandsHistory.Pop().Execute();
-        //    yield return new WaitForSeconds(0.5f);
-            
-
-        //}
         commandsHistory.Clear();
     }
 
